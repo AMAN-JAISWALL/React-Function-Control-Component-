@@ -12,20 +12,23 @@ export default function Control_Function_Prime(){
 
     function Calculate(event){
           // 10
-          //var c = 0;
-        //   var g = ""
-        for(var i =2; i<=Number; i++ ){  // 
+          var c = 0;
+           var g = ""
+            for(var i =2; i<=Number; i++ ){  // 
             if(Number%i===0){
                 // g = "Not Prime"  
-                setRes( "Not Prime" )
-            }else{
-                // g = "Prime"
-                setRes("Prime")
+                // setRes("Not Prime")
+                c++
             }
         }
-        
-
-        setRes();
+        if(c===1){
+            // setRes("Prime")
+            g = "Prime"
+        }else{
+            // setRes("Not Prime")
+            g = "Not Prime"
+        }
+        setRes(g);
         event.preventDefault()
     }
 
